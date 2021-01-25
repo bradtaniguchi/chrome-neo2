@@ -18,6 +18,7 @@
   "projects": {
     "client": { "tags": [] },
     "client-e2e": { "tags": [], "implicitDependencies": ["client"] },
-    "neows": { "tags": [] }
+    "neows": { "tags": [] },
+    "apod": { "tags": [] }
   }
 }

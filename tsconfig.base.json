@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@chrome-neo2/neows": ["libs/neows/src/index.ts"]
+      "@chrome-neo2/neows": ["libs/neows/src/index.ts"],
+      "@chrome-neo2/apod": ["libs/apod/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
