@@ -16,10 +16,15 @@
     }
   },
   "projects": {
-    "client": { "tags": [] },
+    "client": { "tags": ["type:app"] },
     "client-e2e": { "tags": [], "implicitDependencies": ["client"] },
-    "neows": { "tags": [] },
-    "apod": { "tags": [] },
-    "nivl": { "tags": [] }
+
+    "neows": { "tags": ["type:lib"] },
+    "neows-test": {
+      "tags": ["type:tool"],
+      "implicitDependencies": ["neows"]
+    },
+    "apod": { "tags": ["type:lib"] },
+    "nivl": { "tags": ["type:lib"] }
   }
 }

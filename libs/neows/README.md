@@ -1,7 +1,11 @@
 # neows
 
-This library was generated with [Nx](https://nx.dev).
+NEO Web Service API library
 
-## Running unit tests
+## Running local queries from CLI:
 
-Run `nx test neows` to execute the unit tests via [Jest](https://jestjs.io).
+example:
+
+```
+nx run neows:test
+```
