@@ -170,6 +170,31 @@
           }
         }
       }
+    },
+    "nivl": {
+      "root": "libs/nivl",
+      "sourceRoot": "libs/nivl/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/nivl/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/nivl"
+          ],
+          "options": {
+            "jestConfig": "libs/nivl/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

@@ -3,5 +3,6 @@ module.exports = {
     '<rootDir>/apps/client',
     '<rootDir>/libs/neows',
     '<rootDir>/libs/apod',
+    '<rootDir>/libs/nivl',
   ],
 };
