@@ -16,13 +16,8 @@
             "polyfills": "apps/client/src/polyfills.ts",
             "tsConfig": "apps/client/tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "apps/client/src/favicon.ico",
-              "apps/client/src/assets"
-            ],
-            "styles": [
-              "apps/client/src/styles.scss"
-            ],
+            "assets": ["apps/client/src/favicon.ico", "apps/client/src/assets"],
+            "styles": ["apps/client/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -83,9 +78,7 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/client"
-          ],
+          "outputs": ["coverage/apps/client"],
           "options": {
             "jestConfig": "apps/client/jest.config.js",
             "passWithNoTests": true
@@ -114,9 +107,7 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/client-e2e/**/*.{js,ts}"
-            ]
+            "lintFilePatterns": ["apps/client-e2e/**/*.{js,ts}"]
           }
         }
       }
@@ -129,19 +120,37 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "libs/neows/**/*.ts"
-            ]
+            "lintFilePatterns": ["libs/neows/**/*.ts"]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/neows"
-          ],
+          "outputs": ["coverage/libs/neows"],
           "options": {
             "jestConfig": "libs/neows/jest.config.js",
             "passWithNoTests": true
+          }
+        }
+      },
+      "architect": {
+        "test": {
+          "builder": "@nrwl/workspace:run-commands",
+          "outputs": [],
+          "options": {
+            "command": "npx ts-node -r tsconfig-paths/register --project=tools/test-neows/tsconfig.tool.json tools/test-neows/src"
+          }
+        }
+      }
+    },
+    "neows-test": {
+      "root": "tools/test-neows",
+      "sourceRoot": "tools/test-neows/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["tools/test-neows/**/*.ts"]
           }
         }
       }
@@ -154,16 +163,12 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "libs/apod/**/*.ts"
-            ]
+            "lintFilePatterns": ["libs/apod/**/*.ts"]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/apod"
-          ],
+          "outputs": ["coverage/libs/apod"],
           "options": {
             "jestConfig": "libs/apod/jest.config.js",
             "passWithNoTests": true
@@ -179,16 +184,12 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "libs/nivl/**/*.ts"
-            ]
+            "lintFilePatterns": ["libs/nivl/**/*.ts"]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/nivl"
-          ],
+          "outputs": ["coverage/libs/nivl"],
           "options": {
             "jestConfig": "libs/nivl/jest.config.js",
             "passWithNoTests": true

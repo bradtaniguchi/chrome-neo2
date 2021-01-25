@@ -1,5 +1,5 @@
 import { LookupCloseApproachData } from './lookup-close-approach-data';
-import { LookupEstimatedDiameter } from './lookup-esimated-diameter';
+import { LookupEstimatedDiameter } from './lookup-estimated-diameter';
 import { LookupOrbitalData } from './lookup-orbital-data';
 
 /**
